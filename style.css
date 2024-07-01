@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Share+Tech+Mono&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header h1{
+    font-family: "Share Tech Mono", monospace;
+    font-size: 70px;
+    margin-bottom: 1px;
+    margin-top: 3px;
+    display: inline-block; /* Garante que o texto se ajuste ao tamanho do conteúdo */
+}
+header h2 {
+     font-family: "Montserrat", sans-serif;
+     margin-top: -5px;
+     letter-spacing: 30px;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}
+.headline {
+  margin-bottom: 20px;
+}
+.headline h2 {
+  font-size: 24px;
+}
+.headline p {
+  font-size: 16px;
+}
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.article {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  position: relative; /* Adiciona posição relativa para artigo */
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+}
+.article h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.article p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.article .article-image {
+  width: 100%;
+  height: 250px; /* Altura desejada para a imagem */
+  background-size: cover; /* Faz a imagem cobrir todo o espaço designado */
+  background-position: center; /* Centraliza a imagem */
+  border-radius: 8px; /* Borda arredondada */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: filter 0.3s ease-out; /* Transição suave para o filtro de imagem */
+}
+.article .article-image:hover {
+  filter: brightness(70%); /* Reduz o brilho em 70% */
+}
+.article .article-image a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  text-decoration: none;
+  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 0.3s ease-out; /* Transição suave para a opacidade */
+}
+.article .article-image:hover a {
+  opacity: 1; /* Torna o link visível ao passar o mouse */
+}
+.article .article-image a:hover {
+  text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+.article-content {
+  padding: 10px;
+}
